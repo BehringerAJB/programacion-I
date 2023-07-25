@@ -2,7 +2,7 @@
 #define TAMANO_VECTOR 5
 // este programa , sirve para cargar un vector
 int main() {
-    int vector[TAMANO_VECTOR];{0}
+    int vector[TAMANO_VECTOR]={0};
     int i;
     printf("\n Vecor Vacio\n");
  
