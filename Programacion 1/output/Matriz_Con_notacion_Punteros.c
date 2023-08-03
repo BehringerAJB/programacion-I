@@ -86,6 +86,7 @@ void mostrarMatriz(int **matriz, int fila, int columna)
 {
     for (int i = 0; i < fila; i++)
     {
+        
         for (int j = 0; j < columna; j++)
         {
             printf("%4d ", *(*(matriz + i) + j));

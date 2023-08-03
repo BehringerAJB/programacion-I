@@ -1,18 +1,19 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
 
 int main()
 {
-    int numeroSecreto, intentos = 0;
+    int flag,numeroSecreto, intentos = 0;
     int nro;
     srand(time(NULL));
     numeroSecreto = rand() % 20 + 1;
     int distancia;
-    int flag = 1;
+    int totalIntestos=5;
+    flag = 1;
     printf("\n\nBienvenido al juego de adivinar el numero\n");
-    printf("Tenes 15 intentos para adivinar el numero secreto.\n");
+    printf("Tenes %d intentos para adivinar el numero secreto.\n",totalIntestos);
     printf("\nIntento actual: %d\n", numeroSecreto);
     do
     {
@@ -20,7 +21,7 @@ int main()
         scanf("%d", &nro);
     } while (nro < 1 || nro > 20);
 
-    while ((intentos < 15) && flag)
+    while ((intentos < totalIntestos) && flag)
     {
         if (nro == numeroSecreto)
             flag = 0;
@@ -29,19 +30,16 @@ int main()
             distancia = abs(numeroSecreto - nro);
             if (distancia == 1)
                 printf("Estas al lado.\n");
-            else if (distancia >= 5)
+            else if (distancia >= 3)
                 printf("Estas muy lejano\n");
-            else if (distancia >= 2)
+            else if (distancia == 2)
                 printf("Estás muy cera..\n");
-            if (intentos == 15)
-            {
+            if (intentos == totalIntestos)
                 printf("¡Agotaste tus intentos! El numero secreto era %d\n", numeroSecreto);
-                flag = 0;
-            }
             else
             {
                 intentos++;
-                printf("Incorrecto. Te quedan %d intentos.\n", 15 - intentos );
+                printf("Incorrecto. Te quedan %d intentos.\n", totalIntestos - intentos );
                 printf("\nIntento actual: %d\n", intentos + 1);
                 do
                 {
