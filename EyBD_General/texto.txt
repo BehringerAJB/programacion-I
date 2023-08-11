@@ -1,0 +1,54 @@
+1,Carlos Alberto,16000,01
+2,Pedro,20200,01
+3,Alicia,25000,01
+1,Carlos Alberto,10000,01
+2,Pedro,12000,01
+2,Pedro,30000,01
+3,Alicia,55000,01
+5,Mabel,90000,01
+5,Mabel,20000,01
+1,Carlos Alberto,12000,02
+2,Pedro,25200,02
+3,Alicia,22000,02
+1,Carlos Alberto,12000,02
+2,Pedro,15000,02
+2,Pedro,35000,02
+3,Alicia,60000,02
+5,Mabel,96000,02
+5,Mabel,20000,02
+1,Carlos Alberto,10000,03
+2,Pedro,21000,03
+3,Alicia,21000,03
+1,Carlos Alberto,15000,03
+2,Pedro,10000,03
+2,Pedro,30000,03
+3,Alicia,55000,03
+5,Mabel,93000,03
+5,Mabel,21000,03
+1,Carlos Alberto,19000,04
+2,Pedro,20000,04
+3,Alicia,25000,04
+1,Carlos Alberto,10000,04
+2,Pedro,19000,04
+2,Pedro,33000,04
+3,Alicia,52000,04
+5,Mabel,91000,04
+5,Mabel,26000,04
+1,Carlos Alberto,19000,05
+2,Pedro,22000,05
+3,Alicia,25000,05
+1,Carlos Alberto,14000,05
+2,Pedro,11000,05
+2,Pedro,32000,05
+3,Alicia,55000,05
+5,Mabel,90000,05
+5,Mabel,20000,05
+1,Carlos Alberto,16000,06
+2,Pedro,25000,06
+3,Alicia,25000,06
+1,Carlos Alberto,16000,06
+2,Pedro,15000,06
+2,Pedro,33000,06
+3,Alicia,51000,06
+5,Mabel,91000,06
+5,Mabel,20000,06

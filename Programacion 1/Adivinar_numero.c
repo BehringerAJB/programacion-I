@@ -1,4 +1,22 @@
- #include <stdio.h>
+/*
+Escribir un programa que genere un número aleatorio entre 1 y 20.
+Luego, pide al usuario que adivine ese número.
+El programa proporcionará pistas:
+Si el número ingresado se encuentra a una distancia de 1 del número secreto, el programa mostrará el mensaje "Estás al lado".
+Si el número ingresado se encuentra a una distancia de 2 del número secreto, el programa mostrará el mensaje "Estás muy cerca".
+Si el número ingresado se encuentra a una distancia de 5 del número secreto, el programa mostrará el mensaje "Estás muy lejano".
+
+El jugador tiene un total de 15 intentos para adivinar el número correcto. Después de cada intento, el programa mostrará cuántos intentos le quedan al jugador.
+Informe Final:
+Si el jugador adivina el número en el primer intento, el programa mostrará el mensaje "¡Una genialidad!" y finalizará el juego.
+Si el jugador adivina el número antes de los 5 intentos (inclusive), el programa mostrará el mensaje "¡Sos muy bueno!".
+Si el jugador adivina el número antes de los 10 intentos (inclusive), el programa mostrará el mensaje "Podríamos mejorar esa marca".
+Si el jugador adivina el número después de los 10 intentos, el programa mostrará el mensaje "Deberías practicar más".
+Si el jugador adivina correctamente el número, el programa mostrará un mensaje de felicitaciones y el número total de intentos realizados.
+Si el jugador no logra adivinar el número después de los 15 intentos, el programa mostrará el mensaje "¡Agotaste tus intentos!" y finalizará el juego.
+
+*/
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
@@ -10,7 +28,7 @@ int main()
     srand(time(NULL));
     numeroSecreto = rand() % 20 + 1;
     int distancia;
-    int totalIntestos=5;
+    int totalIntestos=15;
     flag = 1;
     printf("\n\nBienvenido al juego de adivinar el numero\n");
     printf("Tenes %d intentos para adivinar el numero secreto.\n",totalIntestos);
