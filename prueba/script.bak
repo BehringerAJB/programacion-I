@@ -1,0 +1,71 @@
+const card = document.querySelector('.card');
+let isDragging = false;
+let startPosX = 0;
+let startRotation = 0;
+let currentRotation = 0;
+
+// Velocidad de autoajuste (ajusta según tus preferencias)
+const autoAdjustSpeed = 8;
+
+function autoAdjust(rotation) {
+    const halfway = 90;
+    let autoAdjustedRotation = rotation < -halfway ? -180 : (rotation > halfway ? 180 : 0);
+
+    // Mantén el rango de grados dentro de -180 y 180
+    while (autoAdjustedRotation > 180) {
+        autoAdjustedRotation -= 360;
+    }
+    while (autoAdjustedRotation < -180) {
+        autoAdjustedRotation += 360;
+    }
+
+    // Aplica el autoajuste suavemente
+    const adjustStep = autoAdjustedRotation - rotation;
+    const steps = Math.abs(Math.floor(adjustStep / autoAdjustSpeed));
+    const stepSize = adjustStep / steps;
+
+    let currentStep = 0;
+    const adjustInterval = setInterval(() => {
+        if (currentStep < steps) {
+            rotation += stepSize;
+            card.style.transform = `rotateY(${rotation}deg)`;
+            currentStep++;
+        } else {
+            clearInterval(adjustInterval);
+        }
+    }, 10);
+
+    setTimeout(() => {
+        card.style.transition = '';
+    }, steps * 10);
+
+    // Establece la rotación actual después del autoajuste
+    currentRotation = rotation;
+}
+
+card.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startPosX = e.touches[0].clientX;
+    startRotation = currentRotation;
+    card.style.transition = 'none';
+    e.preventDefault();
+});
+
+document.addEventListener('touchend', (e) => {
+    if (isDragging) {
+        isDragging = false;
+
+        const deltaX = e.changedTouches[0].clientX - startPosX;
+        const rotationChange = (deltaX / card.offsetWidth) * 180;
+
+        autoAdjust(startRotation + rotationChange);
+    }
+});
+
+document.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+        const deltaX = e.touches[0].clientX - startPosX;
+        const rotationChange = (deltaX / card.offsetWidth) * 180;
+        card.style.transform = `rotateY(${startRotation + rotationChange}deg)`;
+    }
+});

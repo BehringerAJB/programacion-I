@@ -12,7 +12,7 @@ int error(char*);
 int main()
 {
  FILE *archivo;
- char nom1[80],cad[81];// nombre físico del archivo
+ char nom1[80],cad[81];// nombre fï¿½sico del archivo
  int j,cuenta;
  system("cls");
  p("\n Ingrese el nombre del archivo a crear:"); s("%[^\n]", nom1);
@@ -71,10 +71,10 @@ int contar(char x[])
     while(x[i]!='\n' )
     {
        p("\n en el ciclor\n"); getch();
-        while(x[i]==' ' ) i++;
-        ++cpal; p("\n en el 2º\n"); getch();
+        while(x[i]==' ') i++;
+        ++cpal; p("\n en el 2ï¿½\n"); getch();
         while(x[i]==' '&& x[i]!='\n' ) i++;
-        p("\n en el 3º\n"); getch();
+        p("\n en el 3ï¿½\n"); getch();
     }
 return(cpal);
 }

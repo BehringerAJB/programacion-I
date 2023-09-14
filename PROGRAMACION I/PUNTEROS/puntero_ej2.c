@@ -7,7 +7,7 @@
 void sumar(int,int,int*);
 int main()
 {
-    int i, a, resultado;
+    int i, a, resultado=0;
     int *ptr;
     printf("Ingrese un valor de i:");
     scanf("%d", &i);

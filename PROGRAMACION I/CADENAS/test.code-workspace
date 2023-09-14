@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../prueba"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"FINAL_02_08_2023.C": "cpp",
+			"estructura_con_menu-c": "c",
+			"EJERCICIO01.C": "cpp",
+			"CADENA01.C": "cpp",
+			"string.h": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "test"
+	}
+}
